@@ -7,7 +7,7 @@ Cities: Skylines II assets for a roadside sign light frame and a painted road-si
 | Asset | Folder | Description |
 |---|---|---|
 | SignLight | [`assets/SignLight`](assets/SignLight) | Road-sign underlight and rear support frame. Matte painted support with a white lamp material. |
-| StreetPole | [`assets/StreetPole`](assets/StreetPole) | 3 m road-sign pole with a light blue-gray matte painted finish. |
+| StreetPole | [`assets/StreetPole`](assets/StreetPole) | 3 m road-sign pole with a light blue-gray matte painted finish. |`n| Pole diagnostic | [`assets/Pole_As_SignLight_Structure`](assets/Pole_As_SignLight_Structure) | Pole geometry using the known-good SignLight FBX naming structure. |
 
 Both asset folders contain one main FBX and a `settings.json` file for automatic LOD generation. Import the whole asset folder into the Cities: Skylines II Asset Editor; do not combine files from different folders.
 
@@ -25,3 +25,4 @@ If an import is invisible, restart the Asset Editor and import only the selected
 ## Source files
 
 The `source` folder contains the Blender files used for the published assets. The exported FBX files are the files intended for the game editor.
+

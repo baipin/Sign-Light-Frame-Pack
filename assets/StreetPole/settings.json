@@ -1,0 +1,8 @@
+{
+    "LOD1": {
+        "percentTriangles": 50
+    },
+    "LOD2": {
+        "percentTriangles": 20
+    }
+}

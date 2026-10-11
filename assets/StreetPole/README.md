@@ -1,28 +1,25 @@
-# StreetPole
+# StreetPole 导入修复版
 
-A 3 m Cities: Skylines II roadside sign pole with a light blue-gray sprayed-paint finish.
+请导入本目录 `StreetPole_Prop`，不要导入旧的 `StreetPole_CS2` 目录。
 
-## Contents
+## 关键修复
 
-- `StreetPole.fbx` – the only FBX to import
-- `StreetPole_BaseColor.png` – 1024×1024 square Base Color texture
-- `settings.json` – automatic LOD configuration
+- 资产按 **Static Object / Prop** 导入
+- 主 FBX：`StreetPole.fbx`
+- 主网格对象名：`StreetPole`
+- 网格数据名：`StreetPole`
+- 原点位于柱体底部，局部 Z 范围为 `0–3 m`
+- 尺寸：`0.12 × 0.12 × 3.0 m`
+- 目录中没有外部 LOD FBX，LOD 由 `settings.json` 自动生成
 
-## Model and material data
+## 导入步骤
 
-- Mesh object: `StreetPole`
-- Dimensions: `0.12 × 0.12 × 3.0 m`
-- Base position: bottom at Z=0, object center at Z=1.5 m
-- Material: `StreetPole_Painted`
-- Finish: light blue-gray matte painted steel
-- Metallic: `0.0`
-- Roughness: `0.82`
-- UV: Smart UV Project
-- FBX axis: Forward `-Y`, Up `Z`
-- FBX version: 7400 / FBX 2018
+1. 关闭之前的导入任务，必要时重启资产编辑器。
+2. 选择整个 `StreetPole_Prop` 文件夹。
+3. 资产类型选择 **Static Object / Prop**，不要选择建筑、道路网络或其他资产类型。
+4. 确认主文件是 `StreetPole.fbx`。
+5. LOD1 设置为 50%，LOD2 设置为 20%。
+6. 只点击一次 Import，等待完成。
+7. 导入完成后，在资产浏览器中搜索 `StreetPole`，从道具/静态物体分类中选择它，再点击道路或地面放置。
 
-The `settings.json` file requests LOD1 at 50% and LOD2 at 20% of the source triangle count. The Asset Editor generates those LODs automatically; no external LOD FBX is included.
-
-## Texture editing
-
-Open `source/StreetPole_CS2.blend` in Blender, edit the `StreetPole_BaseColor` image in Texture Paint, save the PNG, and re-export `StreetPole.fbx` with the same object and material names. Keep the texture filename as `StreetPole_BaseColor.png` and keep it beside the FBX when importing.
+如果导入后没有放置交互，通常是资产类型没有选为 Prop，或者编辑器仍使用旧的空预制件缓存。重启资产编辑器后只导入本目录，不要同时导入旧版本。
